@@ -4,11 +4,9 @@ import "../App.css";
 function Button(props){
     return(
         <>
-        <button className="color-btn text-white" 
+        <button className="text-white rounded-full" 
         style={{backgroundColor: props.color}}
-        onClick={()=>{
-            document.querySelector('body').style.backgroundColor = props.color;
-        }}>
+        onClick={props.onclick}>
             {props.color}
         </button>
         </>
