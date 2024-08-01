@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {InputBox} from './components/index'
 import useCurrencyInfo from "./hooks/useCurrencyInfo"
 
@@ -16,6 +16,14 @@ function App() {
         setConvertedAmount((amount * currencyInfo[to]).toFixed(2))
     }
 
+    const swap = () => {
+        setFrom(to)
+        setTo(from)
+        // setAmount(convertedAmount)
+        // setConvertedAmount(amount)
+    }
+
+    useEffect(convert, [amount])
     
     return (
         <div id='main' className='w-full h-screen flex justify-center'>
@@ -32,10 +40,7 @@ function App() {
             }}
             onCurrencyChange={(currency) => (setFrom(currency))} />
             <button
-            onClick={() => {
-                setFrom(to)
-                setTo(from)
-            }}
+            onClick={swap}
             className='bg-blue-800 text-white px-3 rounded-lg py-2 absolute top-1/2 left-1/2 -translate-x-10 -translate-y-14 border-white outline-none'>
                 Swap
             </button>
@@ -49,7 +54,7 @@ function App() {
 
             <button
             onClick={convert}
-            className='bg-blue-800 text-white'
+            className='bg-blue-800 text-white outline-none'
             >Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
 
             </div>
