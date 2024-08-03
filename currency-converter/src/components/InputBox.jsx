@@ -16,13 +16,13 @@ function InputBox({
 
   return (
     <div
-      className={`bg-white w-full p-3 rounded-lg text-sm flex flex-col gap-4 ${className}`}
+      className={`bg-white dark:bg-slate-900 w-full p-3 rounded-lg text-sm flex flex-col gap-4 ${className}`}
     >
       <div id="card-top" className="flex flex-row flex-wrap justify-between">
-        <label htmlFor={amountInputId} className="">
+        <label htmlFor={amountInputId} className="text-black dark:text-white">
           {label}
         </label>
-        <h3 className="">Currency Type</h3>
+        <h3 className="text-black dark:text-white">Currency Type</h3>
       </div>
       <form
         onSubmit={(e) => {
@@ -35,7 +35,7 @@ function InputBox({
         >
           <input
             id={amountInputId}
-            className="outline-none bg-transparent py-1.5 text-black"
+            className="outline-none bg-transparent py-1.5 text-black dark:text-white"
             type="number"
             placeholder="Amount"
             disabled={amountDisable}
@@ -46,7 +46,7 @@ function InputBox({
           />
 
           <select
-            className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none text-black font-semibold"
+            className="rounded-lg px-1 py-1 bg-gray-100 dark:bg-slate-800 cursor-pointer outline-none text-black dark:text-white font-semibold"
             onChange={(e) =>
               onCurrencyChange && onCurrencyChange(e.target.value)
             }
@@ -55,7 +55,7 @@ function InputBox({
           >
             {currencyOptions.map((currency) => (
               <option value={currency}
-              className="bg-transparent"
+              className="bg-white dark:bg-slate-900 text-black dark:text-white"
               >{currency}</option>
             ))}
           </select>
