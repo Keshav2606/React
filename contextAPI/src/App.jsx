@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import ThemeBtn from "./components/ThemeBtn";
 import Card from "./components/Card";
-import ThemeContext from "./context/ThemeContext";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
   })
 
   return (
-    <ThemeContext.Provider value={{theme, lightTheme, darkTheme}}>
+    <ThemeContextProvider value={{theme, lightTheme, darkTheme}}>
       <div className="flex flex-wrap min-h-screen items-center dark:bg-slate-900">
         <div className="w-full">
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
       </div>
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   );
 }
 
