@@ -15,7 +15,7 @@ function Todos() {
           <input type="text"
           value={todo.todoMsg}
           readOnly
-          className="bg-slate-800 outline-none"
+          className="bg-slate-800 w-4/5 outline-none"
           />
           <div id="btns" className="flex flex-wrap gap-2">
             <button
