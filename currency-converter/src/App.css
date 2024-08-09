@@ -8,9 +8,10 @@
 }
 
 #main {
-  background-image: url('https://images.pexels.com/photos/12960362/pexels-photo-12960362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url('https://t3.ftcdn.net/jpg/04/01/81/62/360_F_401816254_mPCm235XCEkxrzBXhCKjVPMgNOLDoS9R.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

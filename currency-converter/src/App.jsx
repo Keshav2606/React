@@ -45,7 +45,9 @@ function App() {
           id="container"
           className="w-2/5 h-fit bg-gray-700 dark:bg-gray-300 bg-opacity-60 dark:bg-opacity-30 px-4 py-6 rounded-lg my-auto flex flex-col justify-center gap-4"
         >
-          <ThemeBtn />
+          <div className="w-1/3">
+            <ThemeBtn />
+          </div>
           <InputBox
             label="From"
             amount={amount}
@@ -58,7 +60,7 @@ function App() {
           />
           <button
             onClick={swap}
-            className="bg-blue-800 dark:bg-gray-400 text-white dark:text-black px-3 rounded-lg py-2 absolute top-1/2 left-1/2 -translate-x-10 -translate-y-8 border-white dark:border-slate-900 outline-none"
+            className="bg-blue-800 dark:bg-slate-800 text-white px-3 rounded-lg py-2 absolute top-1/2 left-1/2 -translate-x-10 -translate-y-8 border-white dark:border-slate-900 outline-none"
           >
             Swap
           </button>
